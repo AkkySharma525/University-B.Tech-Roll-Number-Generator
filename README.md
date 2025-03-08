@@ -1,6 +1,6 @@
 # University B.Tech Roll Number Generator  
 
-[![Project Status](https://img.shields.io/badge/Status-Completed-brightgreen)](https://akkysharma525.github.io/University-B.Tech-Roll-Number-Generator/)  
+ 
 🔗 **Live Demo:** [University B.Tech Roll Number Generator](https://akkysharma525.github.io/University-B.Tech-Roll-Number-Generator/)  
 
 ## 📌 About the Project  
