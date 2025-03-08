@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Roll Number Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="newlogo.png" alt="University Logo" class="logo">
+        <h1>IP University B.Tech Roll Number Generator</h1>
+        <p class="disclaimer">This is an unofficial student project and is not affiliated with the university.</p>
+    </header>
+
+    <main>
+        <form id="rollNumberForm">
+            <label for="classRoll">Enter Class Roll Number (3 digits):</label>
+            <input type="number" id="classRoll" min="1" max="999" required>
+
+            <label for="college">Select College:</label>
+            <select id="college">
+                <option value="962">ADGITM-E</option>
+                <option value="156">ADGITM-M</option>
+                <option value="553">BMIET</option>
+                <option value="208">BPIT</option>
+                <option value="115">BVCOE-M</option>
+                <option value="180">DTC-M</option>
+                <option value="272">GNIT</option>
+                <option value="238">GTB4CEC</option>
+                <option value="768">GTBIT-E</option>
+                <option value="132">GTBIT-M</option>
+                <option value="965">HMR-E</option>
+                <option value="133">HMR-M</option>
+                <option value="255">JIMSEMTC</option>
+                <option value="964">MAIT-E</option>
+                <option value="148">MAIT-M</option>
+                <option value="963">MSIT-E</option>
+                <option value="150">MSIT-M</option>
+                <option value="899">SBIT</option>
+                <option value="279">TIIPS</option>
+                <option value="190">USAR</option>
+                <option value="164">USICT</option>
+                <option value="177">VIPS</option>
+            </select>
+
+            <label for="branch">Select Branch:</label>
+            <select id="branch">
+                <option value="031">IT</option>
+                <option value="032">CSE</option>
+                <option value="131">ITE</option>
+                <option value="034">CS-DS</option>
+                <option value="035">CS-AIML</option>
+                <option value="036">ECE</option>
+                <option value="037">EEE</option>
+            </select>
+
+            <label for="admissionYear">Select Admission Year:</label>
+            <select id="admissionYear">
+                <script>
+                    let yearDropdown = document.getElementById("admissionYear");
+                    let currentYear = new Date().getFullYear();
+                    for (let year = 2020; year <= currentYear; year++) {
+                        let option = document.createElement("option");
+                        option.value = year.toString().slice(-2);
+                        option.text = year;
+                        yearDropdown.appendChild(option);
+                    }
+                </script>
+            </select>
+
+            <button type="submit">Generate Roll Number</button>
+        </form>
+
+        <p id="result"></p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
